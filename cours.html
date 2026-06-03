@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cours complet couleurs CSS : nom, HEX, RGB, RGBA, HSL</title>
+    <meta name="description"
+      content="Cours complet pour comprendre les couleurs CSS : noms de couleurs, code hexadécimal, RGB, RGBA, HSL avec exemples color, background-color, border et conseils pratiques.">
+    <meta name="keywords"
+      content="cours couleur CSS, nom couleur CSS, HEX CSS, RGB CSS, RGBA CSS, HSL CSS, apprendre CSS">
+    <link rel="canonical" href="https://votre-nom.github.io/css-color-master/cours.html">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+<body class="course-page">
+  <header class="site-header">
+    <nav class="nav container">
+      <a class="logo" href="index.html"><span>CSS</span> Color Master</a>
+      <button class="menu-btn" id="menuBtn">☰</button>
+      <div class="nav-links" id="navLinks"><a href="index.html">Accueil</a><a href="cours.html">Cours complet</a><a
+          href="exemples.html">Exemples visuels</a><a href="exercices.html">Exercices</a><a
+          href="designer.html">Conseils designer</a><a class="btn-small"
+          href="https://www.harimadatech.com/index.html#inscription" target="_blank">Inscription</a></div>
+    </nav>
+  </header>
+  <main class="container lesson-layout">
+    <article class="lesson">
+      <p class="badge">Cours complet</p>
+      <h1 class="animated-title">Comprendre les couleurs en CSS de A à Z</h1>
+      <p class="lead">En CSS, la couleur sert à améliorer la lisibilité, l’identité visuelle et la beauté d’un site. On
+        peut appliquer une couleur sur un texte, un fond, une bordure, une ombre ou même un dégradé.</p>
+
+      <section class="lesson-block reveal">
+        <h2>1. Appliquer une couleur sur un texte</h2>
+        <p>Pour changer la couleur d’un texte, on utilise la propriété <strong>color</strong>.</p>
+        <pre><code>h1 {
+    color: blue;
+  }</code></pre>
+        <div class="visual-example">
+          <h3 style="color:blue">Bonjour, ce titre est bleu</h3>
+          <p>Ici, le texte du titre utilise <code>color: blue;</code>.</p>
+        </div>
+      </section>
+
+      <section class="lesson-block reveal">
+        <h2>2. Appliquer une couleur de fond</h2>
+        <p>Pour changer le fond d’un élément, on utilise <strong>background-color</strong>.</p>
+        <pre><code>.bloc {
+    background-color: orange;
+  }</code></pre>
+        <div class="visual-example bg-orange">Ce bloc utilise <code>background-color: orange;</code></div>
+      </section>
+
+      <section class="lesson-block reveal">
+        <h2>3. Appliquer une couleur sur une bordure</h2>
+        <p>La couleur peut aussi être utilisée dans une bordure avec <strong>border</strong>.</p>
+        <pre><code>.carte {
+    border: 3px solid green;
+  }</code></pre>
+        <div class="visual-example border-green">Cette carte utilise une bordure verte.</div>
+      </section>
+
+      <section class="lesson-block reveal">
+        <h2>4. Les noms de couleurs CSS</h2>
+        <p>CSS accepte des noms simples comme <code>red</code>, <code>blue</code>, <code>green</code>,
+          <code>orange</code>, <code>black</code>, <code>white</code>. C’est facile pour débuter, mais ce n’est pas très
+          précis pour un design professionnel.</p>
+        <div class="mini-palette"><span style="background:red">red</span><span style="background:blue">blue</span><span
+            style="background:green">green</span><span style="background:orange;color:#111">orange</span><span
+            style="background:black">black</span></div>
+        <pre><code>p {
+    color: red;
+  }</code></pre>
+      </section>
+
+      <section class="lesson-block reveal">
+        <h2>5. Le code HEX</h2>
+        <p>Le format HEX commence par <strong>#</strong>. Exemple : <code>#ff0000</code> signifie rouge. Il est très
+          utilisé dans les sites web, les logos et les maquettes.</p>
+        <pre><code>.bouton {
+    background-color: #2563eb;
+    color: #ffffff;
+  }</code></pre>
+        <div class="visual-example" style="background:#2563eb;color:white">Bouton avec fond HEX #2563eb</div>
+      </section>
+
+
+      <section class="lesson-block reveal">
+        <h2>5.1. Comprendre les valeurs HEX : #RRGGBB</h2>
+        <p>Un code HEX classique possède <strong>6 caractères</strong> après le signe <strong>#</strong>. Ces 6
+          caractères sont divisés en <strong>3 groupes de 2</strong> :</p>
+        <div class="hex-grid">
+          <div class="hex-card"><strong>RR</strong><span>Rouge</span><code>#FF0000</code></div>
+          <div class="hex-card"><strong>GG</strong><span>Vert</span><code>#00FF00</code></div>
+          <div class="hex-card"><strong>BB</strong><span>Bleu</span><code>#0000FF</code></div>
+        </div>
+        <p>Chaque groupe utilise les caractères <strong>0 à 9</strong> et <strong>A à F</strong>. La valeur la plus
+          faible est <code>00</code> et la valeur la plus forte est <code>FF</code>.</p>
+        <pre><code>/* Structure */
+  #RRGGBB
+
+  /* Exemple */
+  #2563eb
+  25 = quantité de rouge
+  63 = quantité de vert
+  eb = quantité de bleu</code></pre>
+        <div class="visual-example hex-demo">
+          <span>#000000<br>Noir</span>
+          <span>#FFFFFF<br>Blanc</span>
+          <span>#FF0000<br>Rouge</span>
+          <span>#00FF00<br>Vert</span>
+          <span>#0000FF<br>Bleu</span>
+        </div>
+      </section>
+
+      <section class="lesson-block reveal">
+        <h2>5.2. HEX court, HEX long et HEX avec transparence</h2>
+        <p>En CSS, vous pouvez utiliser plusieurs syntaxes HEX selon votre besoin. Le plus utilisé est le format
+          <strong>#RRGGBB</strong>, mais il existe aussi un format court et un format avec transparence.</p>
+        <div class="table-wrap">
+          <table>
+            <tr>
+              <th>Syntaxe</th>
+              <th>Nom</th>
+              <th>Exemple</th>
+              <th>Utilisation</th>
+            </tr>
+            <tr>
+              <td><code>#RGB</code></td>
+              <td>HEX court</td>
+              <td><code>#f00</code></td>
+              <td>équivaut à <code>#ff0000</code></td>
+            </tr>
+            <tr>
+              <td><code>#RRGGBB</code></td>
+              <td>HEX long</td>
+              <td><code>#2563eb</code></td>
+              <td>format professionnel le plus courant</td>
+            </tr>
+            <tr>
+              <td><code>#RGBA</code></td>
+              <td>HEX court avec transparence</td>
+              <td><code>#0008</code></td>
+              <td>noir avec transparence</td>
+            </tr>
+            <tr>
+              <td><code>#RRGGBBAA</code></td>
+              <td>HEX long avec transparence</td>
+              <td><code>#2563ebcc</code></td>
+              <td>bleu avec opacité</td>
+            </tr>
+          </table>
+        </div>
+        <p><strong>AA</strong> représente l’alpha, c’est-à-dire la transparence. <code>00</code> signifie complètement
+          transparent, <code>FF</code> signifie totalement visible.</p>
+        <div class="color-note"><strong>Conseil :</strong> pour les débutants, commencez avec <code>#RRGGBB</code>. Pour
+          la transparence, utilisez plutôt <code>rgba()</code>, car c’est plus facile à lire.</div>
+      </section>
+
+      <section class="lesson-block reveal">
+        <h2>Résumé des syntaxes de couleurs CSS</h2>
+        <div class="syntax-cards">
+          <div>
+            <h3>Nom</h3><code>color: blue;</code>
+            <p>Simple, rapide, bon pour apprendre.</p>
+          </div>
+          <div>
+            <h3>HEX</h3><code>color: #2563eb;</code>
+            <p>Très utilisé dans le web design et les maquettes.</p>
+          </div>
+          <div>
+            <h3>RGB</h3><code>color: rgb(37, 99, 235);</code>
+            <p>Bon pour comprendre rouge, vert et bleu.</p>
+          </div>
+          <div>
+            <h3>RGBA</h3><code>background: rgba(37, 99, 235, .2);</code>
+            <p>Idéal pour ajouter de la transparence.</p>
+          </div>
+          <div>
+            <h3>HSL</h3><code>color: hsl(217, 91%, 60%);</code>
+            <p>Très pratique pour créer des variantes d’une même couleur.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="lesson-block reveal">
+        <h2>6. Le format RGB</h2>
+        <p><strong>RGB</strong> signifie Red, Green, Blue. Chaque valeur va de 0 à 255. Exemple :
+          <code>rgb(255, 0, 0)</code> donne le rouge.</p>
+        <pre><code>.alerte {
+    color: rgb(255, 0, 0);
+  }</code></pre>
+        <div class="visual-example"><strong style="color:rgb(255,0,0)">Texte en rouge avec RGB</strong></div>
+      </section>
+
+      <section class="lesson-block reveal">
+        <h2>Pourquoi utiliser RGB ? Quels avantages ?</h2>
+        <p><strong>RGB</strong> est utile quand vous voulez contrôler la couleur avec trois valeurs : rouge, vert et
+          bleu. C’est aussi très pratique avec JavaScript, parce qu’un programme peut modifier facilement les nombres.
+        </p>
+        <div class="color-note">
+          <strong>Exemple :</strong> si vous augmentez la valeur du rouge, la couleur devient plus rouge. Si vous
+          augmentez le bleu, elle devient plus bleue. C’est donc un format logique pour comprendre la fabrication d’une
+          couleur sur écran.
+        </div>
+        <pre><code>.carte {
+    background-color: rgb(37, 99, 235);
+  }</code></pre>
+        <p><strong>Quand l’utiliser ?</strong> Utilisez RGB pour les exercices, les calculs de couleur, les animations
+          JavaScript, ou quand vous voulez expliquer clairement les valeurs rouge-vert-bleu aux étudiants.</p>
+      </section>
+
+      <section class="lesson-block reveal">
+        <h2>7. Le format RGBA</h2>
+        <p><strong>RGBA</strong> ajoute une transparence. La dernière valeur va de 0 à 1. Exemple :
+          <code>rgba(255, 0, 0, 0.3)</code> donne un rouge transparent.</p>
+        <pre><code>.fond-transparent {
+    background-color: rgba(255, 0, 0, 0.25);
+  }</code></pre>
+        <div class="visual-example" style="background:rgba(255,0,0,.25)">Fond rouge transparent avec RGBA</div>
+      </section>
+
+      <section class="lesson-block reveal">
+        <h2>Pourquoi utiliser RGBA ? Quels avantages ?</h2>
+        <p><strong>RGBA</strong> est comme RGB, mais avec une valeur supplémentaire appelée <strong>alpha</strong>.
+          Cette valeur contrôle la transparence.</p>
+        <ul>
+          <li><code>rgba(0, 0, 0, 1)</code> : couleur totalement visible.</li>
+          <li><code>rgba(0, 0, 0, 0.5)</code> : couleur à moitié transparente.</li>
+          <li><code>rgba(0, 0, 0, 0)</code> : couleur invisible.</li>
+        </ul>
+        <p><strong>Cas très utile :</strong> créer une ombre douce, un fond transparent sur une image, une alerte légère
+          ou un effet de survol.</p>
+        <pre><code>.message {
+    background-color: rgba(37, 99, 235, 0.12);
+    border: 1px solid rgba(37, 99, 235, 0.35);
+  }</code></pre>
+        <div class="visual-example" style="background:rgba(37,99,235,.12);border:1px solid rgba(37,99,235,.35)">Exemple
+          : fond bleu léger avec bordure transparente.</div>
+      </section>
+
+      <section class="lesson-block reveal">
+        <h2>8. Le format HSL</h2>
+        <p><strong>HSL</strong> signifie Hue, Saturation, Lightness : teinte, saturation et luminosité. C’est très
+          pratique pour créer plusieurs variantes d’une même couleur.</p>
+        <pre><code>.titre {
+    color: hsl(220, 80%, 50%);
+  }</code></pre>
+        <div class="visual-example">
+          <h3 style="color:hsl(220,80%,50%)">Titre avec HSL</h3>
+        </div>
+      </section>
+
+      <section class="lesson-block reveal">
+        <h2>Pourquoi utiliser HSL ? Quels avantages ?</h2>
+        <p><strong>HSL</strong> est très apprécié en design parce qu’il permet de modifier une couleur de manière
+          naturelle.</p>
+        <ul>
+          <li><strong>Hue</strong> : la teinte, par exemple bleu, rouge ou vert.</li>
+          <li><strong>Saturation</strong> : couleur vive ou couleur grise.</li>
+          <li><strong>Lightness</strong> : couleur claire ou sombre.</li>
+        </ul>
+        <p>Avec HSL, vous pouvez garder la même couleur principale et créer facilement une version claire pour le fond,
+          une version normale pour le bouton et une version sombre pour le texte.</p>
+        <div class="mini-palette"><span style="background:hsl(221,83%,90%);color:#111">clair</span><span
+            style="background:hsl(221,83%,70%)">moyen clair</span><span
+            style="background:hsl(221,83%,53%)">principal</span><span
+            style="background:hsl(221,83%,38%)">sombre</span><span style="background:hsl(221,83%,25%)">très
+            sombre</span></div>
+      </section>
+
+
+      <section class="lesson-block reveal">
+        <h2>9. Comparaison rapide : Nom, HEX, RGB, RGBA, HSL</h2>
+        <div class="format-grid">
+          <div class="format-card">
+            <h3>Nom de couleur</h3>
+            <p><strong>Avantage :</strong> très facile pour débuter.</p>
+            <p><strong>Limite :</strong> peu précis pour un design professionnel.</p>
+            <pre><code>color: blue;</code></pre>
+          </div>
+          <div class="format-card">
+            <h3>HEX</h3>
+            <p><strong>Avantage :</strong> court, propre et très utilisé dans les maquettes, logos et sites web.</p>
+            <p><strong>Idéal pour :</strong> couleurs fixes d'une charte graphique.</p>
+            <pre><code>color: #2563eb;</code></pre>
+          </div>
+          <div class="format-card">
+            <h3>RGB</h3>
+            <p><strong>Avantage :</strong> facile à manipuler avec JavaScript parce que les valeurs sont des nombres.
+            </p>
+            <p><strong>Idéal pour :</strong> générateur de couleurs, animations et exercices.</p>
+            <pre><code>color: rgb(37, 99, 235);</code></pre>
+          </div>
+          <div class="format-card">
+            <h3>RGBA</h3>
+            <p><strong>Avantage :</strong> ajoute la transparence.</p>
+            <p><strong>Idéal pour :</strong> ombres, fonds transparents, hover, overlay sur image.</p>
+            <pre><code>background: rgba(37,99,235,.15);</code></pre>
+          </div>
+          <div class="format-card">
+            <h3>HSL</h3>
+            <p><strong>Avantage :</strong> excellent pour créer une famille de couleurs claire, normale et sombre.</p>
+            <p><strong>Idéal pour :</strong> design system et palettes professionnelles.</p>
+            <pre><code>color: hsl(221, 83%, 53%);</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <section class="lesson-block reveal">
+        <h2>10. Exemple réel : bouton professionnel</h2>
+        <p>Un bouton professionnel utilise souvent une couleur principale, un texte bien contrasté, une ombre légère et
+          un effet au survol.</p>
+        <pre><code>.btn {
+    background-color: #2563eb;
+    color: white;
+    box-shadow: 0 10px 25px rgba(37, 99, 235, 0.25);
+  }
+
+  .btn:hover {
+    background-color: #1d4ed8;
+  }</code></pre>
+        <div class="visual-example"><a class="btn-small" href="#">Exemple de bouton</a></div>
+      </section>
+      <section class="lesson-block reveal">
+        <h2>11. Où utiliser les couleurs en CSS ?</h2>
+        <div class="table-wrap">
+          <table>
+            <tr>
+              <th>Propriété</th>
+              <th>Utilisation</th>
+              <th>Exemple</th>
+            </tr>
+            <tr>
+              <td>color</td>
+              <td>Couleur du texte</td>
+              <td>color: blue;</td>
+            </tr>
+            <tr>
+              <td>background-color</td>
+              <td>Couleur de fond</td>
+              <td>background-color: yellow;</td>
+            </tr>
+            <tr>
+              <td>border-color</td>
+              <td>Couleur de bordure</td>
+              <td>border: 2px solid red;</td>
+            </tr>
+            <tr>
+              <td>box-shadow</td>
+              <td>Couleur d’ombre</td>
+              <td>box-shadow: 0 5px 20px rgba(0,0,0,.2);</td>
+            </tr>
+          </table>
+        </div>
+      </section>
+    </article>
+    <aside class="side-ad">
+      <h2>Formation HariMada Tech</h2>
+      <p> Vous voulez maîtriser les langages de programmation pour créer des sites web modernes, professionnels et responsives avec formulaires dynamiques et systèmes de sécurité ? 
+        Inscrivez-vous dès maintenant à la formation Développement Web chez HariMada Tech.
+      </p>
+      <a class="btn full" href="https://www.harimadatech.com/index.html#inscription" target="_blank">Je veux
+        m’inscrire
+      </a>
+
+       <div class="asideContact">
+      <div>
+        <a href="https://www.facebook.com/profile.php?id=61554509224634">
+          <i class="fa-brands fa-facebook"></i>
+        </a>
+      </div>
+      <div>
+        <a href="tel:+261383379268">
+          <i class="fa-solid fa-square-phone"></i>
+        </a>
+      </div>
+      <div>
+        <a href="https://wa.me/261322160631?text=Bonjour%20HariMada%20Tech,%20je%20souhaite%20obtenir%20plus%20d'informations%20sur%20vos%20formations." target="_blank">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+      </div>
+      <div>
+        <a href="mailto:harimadatech@gmail.com">
+          <i class="fa-solid fa-envelope-circle-check"></i>
+        </a>
+      </div>
+      <div>
+        <a href="index.html">
+          <i class="fa-solid fa-house"></i>
+        </a>
+      </div>
+    </div>
+    </aside>
+  </main>
+
+   <div class="floating-ad" id="floatingAd">
+    <button id="closeAd">×</button>
+    <h3>HariMada Tech</h3>
+    <p>Transformez votre passion en compétence professionnelle avec notre formation Développement Web Full-Stack : pratique, moderne et adaptée au marché du travail.</p>
+    <a class="btn-small" href="https://www.harimadatech.com/index.html#inscription" target="_blank">Inscription</a>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

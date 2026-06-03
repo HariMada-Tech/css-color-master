@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercices CSS Couleurs par niveau : Débutant, Intermédiaire, Avancé</title>
+  <meta name="description" content="Exercices interactifs CSS couleurs avec niveaux Débutant, Intermédiaire et Avancé, minuterie, score sauvegardé, correction, WhatsApp certificat et partage Facebook.">
+  <meta name="keywords" content="exercice couleur CSS, quiz CSS couleur, HEX RGB RGBA HSL, formation CSS Madagascar, HariMada Tech">
+  <link rel="canonical" href="https://votre-nom.github.io/css-color-master/exercices.html">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header"><nav class="nav container"><a class="logo" href="index.html"><span>CSS</span> Color Master</a><button class="menu-btn" id="menuBtn">☰</button><div class="nav-links" id="navLinks"><a href="index.html">Accueil</a><a href="cours.html">Cours complet</a><a href="exemples.html">Exemples visuels</a><a href="exercices.html">Exercices</a><a href="designer.html">Conseils designer</a><a class="btn-small" href="https://www.harimadatech.com/index.html#inscription" target="_blank">Inscription</a></div></nav></header>
+
+<main class="container lesson-layout">
+  <article class="lesson quiz-app">
+    <p class="badge">Exercices par niveau</p>
+    <h1 class="animated-title">Quiz interactif CSS Couleurs</h1>
+    <p class="lead">Terminez chaque niveau avec au moins <strong>50%</strong> pour débloquer le niveau suivant.</p>
+
+    <section class="lesson-block reveal quiz-dashboard">
+      <div class="level-tabs">
+        <button class="level-tab active" data-level-target="debutant">Débutant</button>
+        <button class="level-tab locked" data-level-target="intermediaire">Intermédiaire 🔒</button>
+        <button class="level-tab locked" data-level-target="avance">Avancé 🔒</button>
+      </div>
+
+      <div class="score-board">
+        <div><strong id="currentLevelName">Débutant</strong><span>Niveau actuel</span></div>
+        <div><strong id="timerDisplay">03:00</strong><span>Minuterie</span></div>
+        <div><strong id="scoreGood">0</strong><span>Bonnes réponses</span></div>
+        <div><strong id="scoreBad">0</strong><span>Mauvaises réponses</span></div>
+        <div><strong id="bestScore">0%</strong><span>Meilleur score</span></div>
+      </div>
+
+      <div class="quiz-actions">
+        <button class="btn-small" id="startLevel" type="button">Commencer le niveau</button>
+        <button class="btn-small" id="resetQuiz" type="button">Recommencer</button>
+        <button class="btn-small" id="clearSavedScore" type="button">Effacer score sauvegardé</button>
+      </div>
+    </section>
+
+    <section class="lesson-block reveal level-panel active" data-level="debutant">
+      <h2>Niveau Débutant</h2>
+      <p>Objectif : maîtriser les bases : <code>color</code>, <code>background-color</code>, nom de couleur et HEX simple.</p>
+
+      <div class="quiz-card" data-answer="color" data-type="choice">
+        <h3>1. Quelle propriété change la couleur du texte ?</h3>
+        <div class="quiz-options"><button data-value="color">color</button><button data-value="background-color">background-color</button><button data-value="padding">padding</button></div>
+        <div class="quiz-feedback"></div>
+        <details><summary>Correction</summary><pre><code>p { color: blue; }</code></pre></details>
+      </div>
+
+      <div class="quiz-card" data-answer="background-color" data-type="choice">
+        <h3>2. Quelle propriété change la couleur de fond ?</h3>
+        <div class="quiz-options"><button data-value="border">border</button><button data-value="background-color">background-color</button><button data-value="font-size">font-size</button></div>
+        <div class="quiz-feedback"></div>
+        <details><summary>Correction</summary><pre><code>.box { background-color: yellow; }</code></pre></details>
+      </div>
+
+      <div class="quiz-card" data-answer="#ff0000" data-type="choice">
+        <h3>3. Quel code HEX représente le rouge pur ?</h3>
+        <div class="quiz-options"><button data-value="#0000ff">#0000FF</button><button data-value="#ff0000">#FF0000</button><button data-value="#00ff00">#00FF00</button></div>
+        <div class="quiz-feedback"></div>
+        <details><summary>Correction</summary><p><code>#FF0000</code> = rouge maximum, vert 0, bleu 0.</p></details>
+      </div>
+
+      <div class="quiz-card" data-answer="00" data-type="text">
+        <h3>4. Dans un code HEX, quelle est la valeur la plus faible ?</h3>
+        <div class="text-answer"><input type="text" placeholder="Tapez votre réponse"><button type="button">Valider</button></div>
+        <div class="quiz-feedback"></div>
+        <details><summary>Correction</summary><p>La valeur la plus faible est <code>00</code>. La valeur la plus forte est <code>FF</code>.</p></details>
+      </div>
+
+      <div class="level-finish">
+        <button class="btn-small finish-level" data-finish-level="debutant" type="button">Voir résultat Débutant</button>
+        <div class="level-result"></div>
+      </div>
+    </section>
+
+    <section class="lesson-block reveal level-panel locked-panel" data-level="intermediaire">
+      <h2>Niveau Intermédiaire 🔒</h2>
+      <p>Objectif : comprendre RGB, RGBA, transparence et aperçu après validation.</p>
+
+      <div class="quiz-card" data-answer="rgba" data-type="choice">
+        <h3>1. Quel format permet d’ajouter facilement une transparence ?</h3>
+        <div class="quiz-options"><button data-value="hex">HEX</button><button data-value="rgba">RGBA</button><button data-value="nom">Nom de couleur</button></div>
+        <div class="quiz-feedback"></div>
+        <details><summary>Correction</summary><pre><code>background-color: rgba(255, 0, 0, 0.2);</code></pre></details>
+      </div>
+
+      <div class="quiz-card" data-answer="rgb(0, 0, 255)|rgb(0,0,255)|blue|#0000ff|#00f" data-type="text" data-preview="blue">
+        <h3>2. Tapez une couleur CSS pour obtenir du bleu</h3>
+        <p>L’aperçu change seulement après validation.</p>
+        <div class="text-answer"><input type="text" placeholder="Tapez votre réponse"><button type="button">Valider</button></div>
+        <div class="live-color-preview">Aperçu après validation</div>
+        <div class="quiz-feedback"></div>
+        <details><summary>Correction</summary><p>Exemples de réponses acceptées : <code>blue</code>, <code>#0000ff</code>, <code>#00f</code>, <code>rgb(0,0,255)</code>.</p></details>
+      </div>
+
+      <div class="quiz-card" data-answer="0.5|.5|50%" data-type="text">
+        <h3>3. Dans <code>rgba(0,0,0,0.5)</code>, quelle valeur indique la transparence ?</h3>
+        <div class="text-answer"><input type="text" placeholder="Tapez votre réponse"><button type="button">Valider</button></div>
+        <div class="quiz-feedback"></div>
+        <details><summary>Correction</summary><p>La valeur <code>0.5</code> indique l’opacité/transparence.</p></details>
+      </div>
+
+      <div class="quiz-card" data-answer="rgb" data-type="choice">
+        <h3>4. Quel format utilise Rouge, Vert et Bleu ?</h3>
+        <div class="quiz-options"><button data-value="hsl">HSL</button><button data-value="rgb">RGB</button><button data-value="rem">REM</button></div>
+        <div class="quiz-feedback"></div>
+        <details><summary>Correction</summary><p>RGB signifie Red, Green, Blue : rouge, vert, bleu.</p></details>
+      </div>
+
+      <div class="level-finish">
+        <button class="btn-small finish-level" data-finish-level="intermediaire" type="button">Voir résultat Intermédiaire</button>
+        <div class="level-result"></div>
+      </div>
+    </section>
+
+    <section class="lesson-block reveal level-panel locked-panel" data-level="avance">
+      <h2>Niveau Avancé 🔒</h2>
+      <p>Objectif : utiliser HSL, variantes, combinaison professionnelle et choix design.</p>
+
+      <div class="quiz-card" data-answer="hsl" data-type="choice">
+        <h3>1. Quel format est pratique pour créer une couleur plus claire ou plus foncée ?</h3>
+        <div class="quiz-options"><button data-value="hsl">HSL</button><button data-value="padding">padding</button><button data-value="display">display</button></div>
+        <div class="quiz-feedback"></div>
+        <details><summary>Correction</summary><p>HSL permet de modifier la luminosité avec la troisième valeur.</p></details>
+      </div>
+
+      <div class="quiz-card" data-answer="color" data-type="choice">
+        <h3>2. Dans un bouton, quelle propriété colore le texte ?</h3>
+        <div class="quiz-options"><button data-value="box-shadow">box-shadow</button><button data-value="color">color</button><button data-value="gap">gap</button></div>
+        <div class="quiz-feedback"></div>
+        <details><summary>Correction</summary><pre><code>.btn { color: white; }</code></pre></details>
+      </div>
+
+      <div class="quiz-card" data-answer="box-shadow" data-type="choice">
+        <h3>3. Quelle propriété permet d’ajouter une ombre colorée ?</h3>
+        <div class="quiz-options"><button data-value="box-shadow">box-shadow</button><button data-value="margin">margin</button><button data-value="font-family">font-family</button></div>
+        <div class="quiz-feedback"></div>
+        <details><summary>Correction</summary><pre><code>box-shadow: 0 10px 25px rgba(37,99,235,.25);</code></pre></details>
+      </div>
+
+      <div class="quiz-card" data-answer="3|trois" data-type="text">
+        <h3>4. Dans <code>hsl(220, 90%, 60%)</code>, combien de valeurs principales trouve-t-on ?</h3>
+        <div class="text-answer"><input type="text" placeholder="Tapez votre réponse"><button type="button">Valider</button></div>
+        <div class="quiz-feedback"></div>
+        <details><summary>Correction</summary><p>HSL utilise 3 valeurs : teinte, saturation et luminosité.</p></details>
+      </div>
+
+      <div class="level-finish">
+        <button class="btn-small finish-level" data-finish-level="avance" type="button">Voir résultat Avancé</button>
+        <div class="level-result"></div>
+      </div>
+    </section>
+
+    <section class="lesson-block reveal global-result">
+      <h2>Actions après exercice</h2>
+      <p>Après avoir terminé un niveau, l’utilisateur peut demander un certificat, partager son résultat ou s’inscrire à un cours complet.</p>
+      <div class="quiz-actions">
+        <a class="btn-small disabled-certificat" id="whatsappCertificat" href="#" aria-disabled="true">Certificat bloqué : terminez le niveau Avancé</a>
+        <a class="btn-small" id="facebookShare" target="_blank" href="#">Publier mon score sur Facebook</a>
+        <a class="btn-small course-cta" target="_blank" href="https://www.harimadatech.com/index.html#inscription">Demander le cours complet</a>
+      </div>
+      <div class="final-result-message" id="finalResultMessage"></div>
+      <div class="security-status" id="securityStatus">Sécurité : évitez de changer d’onglet pendant le quiz.</div>
+    </section>
+  </article>
+
+  <aside class="side-ad">
+    <h2>Formation HariMada Tech</h2>
+    <p>Si votre score est inférieur à 50%, c’est le bon moment pour suivre une vraie formation avec pratique.</p>
+    <a href="https://www.harimadatech.com/index.html#inscription" target="_blank">Je veux suivre le cours complet</a>
+  </aside>
+</main>
+
+<div class="emoji-pop" id="emojiPop"></div>
+<footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>CSS Color Master</h3>
+        <p>Outil pédagogique gratuit créé pour apprendre les couleurs CSS avec pratique et exemples.</p>
+      </div>
+      <div>
+        <h3>Pages utiles</h3>
+        <a href="index.html">Accueil</a>
+        <a href="cours.html">Cours complet</a>
+        <a href="exemples.html">Exemples visuels</a><a href="exercices.html">Exercices</a>
+        <a href="designer.html">Conseils designer</a>
+      </div>
+      <div>
+        <h3>HariMada Tech</h3>
+        <p>Formation informatique et développement web à Madagascar.</p>
+        <a href="https://www.harimadatech.com/index.html#inscription" target="_blank">Demander une formation</a>
+      </div>
+    </div>
+
+    <div class="contact">
+      <div>
+        <a href="https://www.facebook.com/profile.php?id=61554509224634">
+          <i class="fa-brands fa-facebook"></i>
+        </a>
+      </div>
+      <div>
+        <a href="tel:+261383379268">
+          <i class="fa-solid fa-square-phone"></i>
+        </a>
+      </div>
+      <div>
+        <a href="https://wa.me/261322160631?text=Bonjour%20HariMada%20Tech,%20je%20souhaite%20obtenir%20plus%20d'informations%20sur%20vos%20formations." target="_blank">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+      </div>
+      <div>
+        <a href="mailto:harimadatech@gmail.com">
+          <i class="fa-solid fa-envelope-circle-check"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="floating-ad" id="floatingAd">
+    <button id="closeAd">×</button>
+    <h3>HariMada Tech</h3>
+    <p>Transformez votre passion en compétence professionnelle avec notre formation Développement Web Full-Stack : pratique, moderne et adaptée au marché du travail.</p>
+    <a class="btn-small" href="https://www.harimadatech.com/index.html#inscription" target="_blank">Inscription</a>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
