@@ -1,195 +1,179 @@
 <!DOCTYPE html>
-  <html lang="fr">
-    <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Exemples visuels CSS couleur : texte, fond, bouton, carte</title>
-      <meta name="description" content="Exemples visuels responsive pour apprendre à utiliser les couleurs CSS sur texte,
-       fond, bouton, carte, alerte, dégradé et section web.">
-      <link rel="canonical" href="https://harimada-tech.github.io/css-color-master/exemples.html">
-      <meta property="og:title" content="CSS Color Master - Apprendre les couleurs CSS">
-      <meta property="og:description" content="Cours complet, exemples visuels et exercices interactifs pour maîtriser HEX, RGB, RGBA et HSL.">
-      <meta property="og:image" content="https://harimada-tech.github.io/css-color-master/harimada_tech.png">
-      <meta property="og:url" content="https://harimada-tech.github.io/css-color-master/">
-      <meta property="og:type" content="website">
-      <!-- Google tag (gtag.js) -->
-      <script async src="https://www.googletagmanager.com/gtag/js?id=G-8EBX39BBHL"></script>
-      <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-      
-        gtag('config', 'G-8EBX39BBHL');
-      </script>
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
-      <link rel="icon" href="harimada_tech.png"> 
-      <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-      <header class="site-header">
-        <nav class="nav container">
-          <a class="logo" href="index.html">
-            <span>CSS</span> Color Master</a>
-            <button class="menu-btn" id="menuBtn">☰</button>
-            <div class="nav-links" id="navLinks">
-              <a href="index.html">Accueil</a>
-              <a href="cours.html">Cours complet</a>
-              <a href="exemples.html">Exemples visuels</a>
-              <a href="exercices.html">Exercices</a>
-              <a href="designer.html">Conseils designer</a>
-              <a class="btn-small" href="https://www.harimadatech.com/index.html#inscription" target="_blank">Inscription</a>
-            </div>
-        </nav>
-        
-        </header>
-        <main class="container page">
-          <p class="badge">Pratique responsive</p>
-          <h1 class="animated-title">Exemples visuels d’utilisation des couleurs CSS</h1>
-          <p class="lead">Cette page montre le résultat réel du code CSS. 
-            Les cartes sont maintenant adaptées aux petits écrans sans barre horizontale.
-          </p>
-          
-          <section class="examples-grid">
-            <div class="example-card reveal">
-              <h2 style="color:#dc2626">Texte rouge</h2>
-              <p>On utilise 
-                <strong>color</strong> pour changer la couleur du texte.
-              </p>
-              <pre>
-                <code>h2 { color: #dc2626; }</code>
-              </pre>
-            </div>
-            <div class="example-card reveal" style="background:#fef3c7">
-              <h2>Fond doux</h2>
-              <p>On utilise 
-                <strong>background-color</strong> 
-                pour changer le fond.
-              </p>
-              <pre>
-                <code>.box {background-color: #fef3c7; }</code>
-              </pre>
-            </div>
-            <div class="example-card reveal" style="border:4px solid #16a34a">
-              <h2>Bordure verte</h2>
-              <p>La couleur peut être utilisée dans une bordure.</p>
-              <pre>
-                <code>.box { border: 4px solid #16a34a; }</code>
-              </pre>
-            </div>
-            <div class="example-card reveal" style="box-shadow:0 18px 45px rgba(37,99,235,.35)">
-              <h2>Ombre colorée</h2>
-              <p>RGBA est parfait pour les ombres transparentes.</p>
-              <pre>
-                <code>.box { box-shadow: 0 18px 45px rgba(37,99,235,.35);}</code>
-              </pre>
-            </div>
-            <div class="example-card gradient-demo reveal">
-              <h2>Dégradé</h2>
-              <p>Un dégradé mélange plusieurs couleurs dans le fond.</p>
-              <pre>
-                <code>.hero { background: linear-gradient(135deg,#2563eb,#9333ea);}</code>
-              </pre>
-            </div>
-            <div class="example-card dark-demo reveal">
-              <h2>Contraste</h2>
-              <p>Sur un fond sombre, utilisez un texte clair.</p>
-              <pre>
-                <code>.section { background:#111827; color:#ffffff;}</code>
-              </pre>
-            </div>
-            <div class="example-card reveal" style="background:rgba(249,115,22,.12);border:2px solid rgba(249,115,22,.45)">
-              <h2>Alerte douce</h2>
-              <p>RGBA permet de créer un message visible mais pas agressif.</p>
-              <pre>
-                <code>.alerte { background: rgba(249,115,22,.12); border: 2px solid rgba(249,115,22,.45);}</code>
-              </pre>
-            </div>
-            <div class="example-card reveal">
-              <h2 style="color:hsl(221,83%,53%)">Variante HSL</h2>
-              <p>HSL aide à créer des variantes claires et sombres de la même couleur.</p>
-              <pre>
-                <code>.titre { color: hsl(221,83%,53%);}</code>
-              </pre>
-            </div>
-          </section>
-          <section class="panel reveal">
-            <h2>Exemple complet : carte professionnelle</h2>
-            <div class="live-box">
-              <h3>Formation développement web</h3>
-              <p>Fond doux, bordure colorée, ombre légère et bouton visible.</p>
-              <a class="btn-small" href="https://www.harimadatech.com/index.html#inscription" target="_blank">Je m’inscris</a>
-            </div>
-            <pre>
-              <code>.carte {
-                background-color: rgba(37, 99, 235, 0.12); 
-                border: 3px solid #2563eb; 
-                box-shadow: 0 16px 45px rgba(37, 99, 235, 0.28);
-              }
-            </code>
-          </pre>
-        </section>
-        <section class="ad-banner reveal">
-          <div>
-            <p class="badge">HariMada Tech</p>
-            <h2>Transformez ces exemples en vrai site web</h2>
-            <p>Avec la formation développement web, vous pratiquez HTML, CSS, JavaScript, 
-              responsive design et mise en ligne gratuite.
-            </p>
-          </div>
-          <a class="btn" href="https://www.harimadatech.com/index.html#inscription" target="_blank">Demander la formation</a>
-        </section>
-      </main>
+<html lang="fr">
 
-      <footer class="footer">
-      <div class="container footer-grid">
-        <div>
-          <h3>CSS Color Master</h3>
-          <p>Outil pédagogique gratuit créé pour apprendre les couleurs CSS avec pratique et exemples.</p>
-        </div>
-        <div>
-          <h3>Pages utiles</h3>
-          <a href="index.html">Accueil</a>
-          <a href="cours.html">Cours complet</a>
-          <a href="exemples.html">Exemples visuels</a><a href="exercices.html">Exercices</a>
-          <a href="designer.html">Conseils designer</a>
-        </div>
-        <div>
-          <h3>HariMada Tech</h3>
-          <p>Formation informatique et développement web à Madagascar.</p>
-          <a href="https://www.harimadatech.com/index.html#inscription" target="_blank">Demander une formation</a>
-        </div>
-      </div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exemples visuels CSS couleur : texte, fond, bouton, carte</title>
+  <meta name="description"
+    content="Exemples visuels responsive pour apprendre à utiliser les couleurs CSS sur texte, fond, bouton, carte, alerte, dégradé et section web.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#2563eb">
+  <meta property="og:title" content="CSS Color Master - Apprendre les couleurs CSS">
+  <meta property="og:description"
+    content="Cours complet, exemples visuels et exercices interactifs pour maîtriser HEX, RGB, RGBA et HSL.">
+  <meta property="og:image" content="https://harimada-tech.github.io/css-color-master/harimada_tech.png">
+  <meta property="og:url" content="https://harimada-tech.github.io/css-color-master/">
+  <meta property="og:type" content="website">
+    <link rel="canonical" href="https://harimada-tech.github.io/css-color-master/exemples.html">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+  <link rel="icon" href="harimada_tech.png">
+  <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8EBX39BBHL"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-8EBX39BBHL');
+    </script>
+</head>
 
-       <div class="contact">
+<body>
+  <header class="site-header">
+    <nav class="nav container">
+      <a class="logo" href="index.html">
+        <span>CSS</span> Color Master</a><button
+        class="menu-btn" id="menuBtn">☰</button>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html">Accueil</a>
+        <a href="cours.html">Cours complet</a>
+        <a
+          href="exemples.html">Exemples visuels</a>
+          <a href="exercices.html">Exercices</a><a
+          href="designer.html">Conseils designer</a>
+          <button class="install-app-btn" id="installAppBtn" type="button"
+          hidden>📲 Installer</button><button class="theme-toggle" id="themeToggle" type="button">🌙</button><a
+          class="btn-small" href="https://www.harimadatech.com/index.html#inscription" target="_blank">Inscription</a>
+      </div>
+    </nav>
+  </header>
+  <main class="container page">
+    <p class="badge">Pratique responsive</p>
+    <h1 class="animated-title">Exemples visuels d’utilisation des couleurs CSS</h1>
+    <p class="lead">Cette page montre le résultat réel du code CSS. Les cartes sont maintenant adaptées aux petits
+      écrans sans barre horizontale.</p>
+    <section class="examples-grid">
+      <div class="example-card reveal">
+        <h2 style="color:#dc2626">Texte rouge</h2>
+        <p>On utilise <strong>color</strong> pour changer la couleur du texte.</p>
+        <pre><code>h2 {
+  color: #dc2626;
+}</code></pre>
+      </div>
+      <div class="example-card reveal" style="background:#fef3c7">
+        <h2>Fond doux</h2>
+        <p>On utilise <strong>background-color</strong> pour changer le fond.</p>
+        <pre><code>.box {
+  background-color: #fef3c7;
+}</code></pre>
+      </div>
+      <div class="example-card reveal" style="border:4px solid #16a34a">
+        <h2>Bordure verte</h2>
+        <p>La couleur peut être utilisée dans une bordure.</p>
+        <pre><code>.box {
+  border: 4px solid #16a34a;
+}</code></pre>
+      </div>
+      <div class="example-card reveal" style="box-shadow:0 18px 45px rgba(37,99,235,.35)">
+        <h2>Ombre colorée</h2>
+        <p>RGBA est parfait pour les ombres transparentes.</p>
+        <pre><code>.box {
+  box-shadow: 0 18px 45px rgba(37,99,235,.35);
+}</code></pre>
+      </div>
+      <div class="example-card gradient-demo reveal">
+        <h2>Dégradé</h2>
+        <p>Un dégradé mélange plusieurs couleurs dans le fond.</p>
+        <pre><code>.hero {
+  background: linear-gradient(135deg,#2563eb,#9333ea);
+}</code></pre>
+      </div>
+      <div class="example-card dark-demo reveal">
+        <h2>Contraste</h2>
+        <p>Sur un fond sombre, utilisez un texte clair.</p>
+        <pre><code>.section {
+  background:#111827;
+  color:#ffffff;
+}</code></pre>
+      </div>
+      <div class="example-card reveal" style="background:rgba(249,115,22,.12);border:2px solid rgba(249,115,22,.45)">
+        <h2>Alerte douce</h2>
+        <p>RGBA permet de créer un message visible mais pas agressif.</p>
+        <pre><code>.alerte {
+  background: rgba(249,115,22,.12);
+  border: 2px solid rgba(249,115,22,.45);
+}</code></pre>
+      </div>
+      <div class="example-card reveal">
+        <h2 style="color:hsl(221,83%,53%)">Variante HSL</h2>
+        <p>HSL aide à créer des variantes claires et sombres de la même couleur.</p>
+        <pre><code>.titre {
+  color: hsl(221,83%,53%);
+}</code></pre>
+      </div>
+    </section>
+    <section class="panel reveal">
+      <h2>Exemple complet : carte professionnelle</h2>
+      <div class="live-box">
+        <h3>Formation développement web</h3>
+        <p>Fond doux, bordure colorée, ombre légère et bouton visible.</p><a class="btn-small"
+          href="https://www.harimadatech.com/index.html#inscription" target="_blank">Je m’inscris</a>
+      </div>
+      <pre><code>.carte {
+  background-color: rgba(37, 99, 235, 0.12);
+  border: 3px solid #2563eb;
+  box-shadow: 0 16px 45px rgba(37, 99, 235, 0.28);
+}</code></pre>
+    </section>
+    <section class="ad-banner reveal">
       <div>
-        <a href="https://www.facebook.com/profile.php?id=61554509224634">
-          <i class="fa-brands fa-facebook"></i>
-        </a>
+        <p class="badge">HariMada Tech</p>
+        <h2>Transformez ces exemples en vrai site web</h2>
+        <p>Avec la formation développement web, vous pratiquez HTML, CSS, JavaScript, responsive design et mise en ligne
+          gratuite.</p>
+      </div><a class="btn" href="https://www.harimadatech.com/index.html#inscription" target="_blank">Demander la
+        formation</a>
+    </section>
+  </main>
+
+    <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>CSS Color Master</h3>
+        <p>Outil pédagogique gratuit créé pour apprendre les couleurs CSS avec pratique et exemples.</p>
       </div>
       <div>
-        <a href="tel:+261383379268">
-          <i class="fa-solid fa-square-phone"></i>
-        </a>
+        <h3>Pages utiles</h3>
+        <a href="cours.html">Cours complet</a>
+        <a href="exemples.html">Exemples visuels</a><a href="exercices.html">Exercices</a>
+        <a href="designer.html">Conseils designer</a>
       </div>
       <div>
-        <a href="https://wa.me/261322160631?text=Bonjour%20HariMada%20Tech,%20je%20souhaite%20obtenir%20plus%20d'informations%20sur%20vos%20formations." target="_blank">
-            <i class="fa-brands fa-whatsapp"></i>
-        </a>
-      </div>
-      <div>
-        <a href="mailto:harimadatech@gmail.com">
-          <i class="fa-solid fa-envelope-circle-check"></i>
-        </a>
+        <h3>HariMada Tech</h3>
+        <p>Formation informatique et développement web à Madagascar.</p>
+        <a href="https://www.harimadatech.com/index.html#inscription" target="_blank">Demander une formation</a>
       </div>
     </div>
-    </footer>
 
-    <div class="floating-ad" id="floatingAd">
-      <button id="closeAd">×</button>
-      <h3>HariMada Tech</h3>
-      <p>Transformez votre passion en compétence professionnelle avec notre formation Développement Web Full-Stack : pratique, moderne et adaptée au marché du travail.</p>
-      <a class="btn-small" href="https://www.harimadatech.com/index.html#inscription" target="_blank">Inscription</a>
+    <div class="contact">
+        <a href="https://www.facebook.com/profile.php?id=61554509224634"> <i class="fa-brands fa-facebook"></i></a>
+        <a href="tel:+261383379268"><i class="fa-solid fa-square-phone"></i>
+        <a href="https://wa.me/261322160631?text=Bonjour%20HariMada%20Tech,%20je%20souhaite%20obtenir%20plus%20d'informations%20sur%20vos%20formations." target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="mailto:harimadatech@gmail.com"><i class="fa-solid fa-envelope-circle-check"></i></a>
     </div>
-      <script src="script.js"></script>
-    </body>
+  </footer>
+  <div class="global-hmt-ad" id="globalHmtAd" aria-label="Publicité HariMada Tech">
+    <button class="ad-minimize" id="minimizeHmtAd" type="button" title="Réduire">−</button>
+    <button class="ad-close" id="closeHmtAd" type="button" title="Fermer">×</button>
+    <h3>HariMada Tech</h3>
+   <p>Transformez votre passion en compétence professionnelle avec notre formation Développement Web Full-Stack : pratique, moderne et adaptée au marché du travail.</p>
+    <a href="https://www.harimadatech.com/index.html#inscription" target="_blank">Inscription</a>
+  </div>
+  <button class="hmt-ad-bubble" id="openHmtAd" type="button" title="Afficher HariMada Tech">🎓</button>
+
+  <script src="script.js"></script>
+</body>
+
 </html>
