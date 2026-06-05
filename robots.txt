@@ -1,3 +1,9 @@
-User-agent: *
-Allow: /
-Sitemap: https://votre-nom.github.io/css-color-master/sitemap.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url><loc>"https://harimada-tech.github.io/css-color-master/</loc></url>
+<url><loc>"https://harimada-tech.github.io/css-color-master/cours.html</loc></url>
+<url><loc>"https://harimada-tech.github.io/css-color-master/exemples.html</loc></url>
+<url><loc>"https://harimada-tech.github.io/css-color-master/designer.html</loc></url>
+  <url><loc>"https://harimada-tech.github.io/css-color-master/exercices.html</loc></url>
+  <url><loc>"https://harimada-tech.github.io/css-color-master/verifier-certificat.html</loc></url>
+</urlset>
