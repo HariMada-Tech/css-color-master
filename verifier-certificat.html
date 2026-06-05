@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vérifier certificat CSS Color Master - HariMada Tech</title>
+  <meta name="description" content="Vérifiez un certificat CSS Color Master généré par HariMada Tech avec son numéro de certificat.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#2563eb">
+</head>
+<body>
+<header class="site-header"><nav class="nav container"><a class="logo" href="index.html"><span>CSS</span> Color Master</a><button class="menu-btn" id="menuBtn">☰</button><div class="nav-links" id="navLinks"><a href="index.html">Accueil</a><a href="cours.html">Cours complet</a><a href="exemples.html">Exemples visuels</a><a href="exercices.html">Exercices</a><a href="designer.html">Conseils designer</a><button class="install-app-btn" id="installAppBtn" type="button" hidden>📲 Installer</button><button class="theme-toggle" id="themeToggle" type="button">🌙</button><a class="btn-small" href="https://www.harimadatech.com/index.html#inscription" target="_blank">Inscription</a></div></nav></header>
+<main class="container page">
+<section class="lesson-block reveal verify-box">
+<p class="badge">Vérification</p>
+<h1>Vérifier un certificat</h1>
+<p>Entrez le numéro du certificat généré sur ce navigateur. La vérification utilise les données sauvegardées localement avec <code>localStorage</code>.</p>
+<div class="text-answer">
+<input id="certificateNumberInput" type="text" placeholder="Exemple : HMT-CSS-2026-123456">
+<button class="btn-small" id="verifyCertificateBtn" type="button">Vérifier</button>
+</div>
+<div class="final-result-message" id="verifyResult"></div>
+</section>
+</main>
+
+
+<div class="global-hmt-ad" id="globalHmtAd" aria-label="Publicité HariMada Tech">
+    <button class="ad-minimize" id="minimizeHmtAd" type="button" title="Réduire">−</button>
+    <button class="ad-close" id="closeHmtAd" type="button" title="Fermer">×</button>
+    <h3>HariMada Tech</h3>
+    <p>Apprenez HTML, CSS, JavaScript avec projet réel.</p>
+    <a href="https://www.harimadatech.com/index.html#inscription" target="_blank">Inscription</a>
+</div>
+<button class="hmt-ad-bubble" id="openHmtAd" type="button" title="Afficher HariMada Tech">🎓</button>
+
+<script src="script.js"></script>
+</body>
+</html>
